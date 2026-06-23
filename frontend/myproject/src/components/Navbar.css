@@ -1,0 +1,117 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: var(--shadow-sm);
+  border-bottom-color: var(--color-border);
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+
+.navbar-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--color-ink);
+  color: var(--color-brass);
+  font-size: 1rem;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-slate);
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar-link:hover { color: var(--color-ink); }
+.navbar-link.active { color: var(--color-ink); border-bottom-color: var(--color-brass); }
+
+.navbar-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--color-border);
+}
+
+.navbar-auth, .navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-transform: capitalize;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-ink);
+  padding: 6px;
+}
+
+@media (max-width: 860px) {
+  .navbar-toggle { display: inline-flex; }
+
+  .navbar-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 20px 24px 32px;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+  }
+
+  .navbar-links.is-open { transform: translateX(0); }
+
+  .navbar-link { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+  .navbar-divider { display: none; }
+  .navbar-auth, .navbar-user { flex-direction: column; align-items: flex-start; width: 100%; gap: 12px; margin-top: 8px; }
+  .navbar-auth .btn, .navbar-user .btn { width: 100%; }
+}

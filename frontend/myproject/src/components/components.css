@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  margin-top: auto;
+  background: var(--color-ink);
+  color: #aab3c4;
+  padding: 64px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.footer-brand p { margin-top: 14px; max-width: 32ch; font-size: 0.92rem; line-height: 1.6; }
+
+.footer-col { display: flex; flex-direction: column; gap: 12px; }
+.footer-col h4 { color: var(--color-paper); font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.footer-col a { font-size: 0.92rem; color: #aab3c4; transition: color 0.15s ease; }
+.footer-col a:hover { color: var(--color-brass); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  font-size: 0.78rem;
+  color: #6b7385;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   JobCard — dossier / index-card motif
+   ========================================================================== */
+.job-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-brass);
+  border-radius: var(--radius-md);
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.job-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.job-card-index {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 0.7rem;
+  color: var(--color-slate-light);
+}
+
+.job-card-top { display: flex; align-items: center; justify-content: space-between; }
+
+.job-card-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.job-card-title { font-size: 1.15rem; line-height: 1.3; }
+.job-card-title a:hover { color: var(--color-brass-dark); }
+.job-card-company { color: var(--color-slate); font-size: 0.9rem; font-weight: 500; }
+
+.job-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.76rem;
+  color: var(--color-slate);
+}
+.job-card-meta span { display: inline-flex; align-items: center; gap: 5px; }
+
+.job-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+}
+.job-card-salary { font-size: 0.85rem; font-weight: 600; color: var(--color-ink); }
+.job-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-brass-dark);
+}
+
+.job-card-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.job-card-tag {
+  font-size: 0.72rem;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  color: var(--color-slate);
+}
+
+/* ==========================================================================
+   SearchBar
+   ========================================================================== */
+.searchbar {
+  display: flex;
+  align-items: stretch;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  gap: 4px;
+}
+
+.searchbar-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+
+.searchbar-icon { color: var(--color-slate-light); flex-shrink: 0; }
+
+.searchbar-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: transparent;
+  color: var(--color-ink);
+}
+.searchbar-input::placeholder { color: var(--color-slate-light); }
+
+.searchbar-divider { width: 1px; background: var(--color-border); margin: 6px 0; }
+
+.searchbar-submit { flex-shrink: 0; }
+
+.searchbar-inline {
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 700px) {
+  .searchbar { flex-direction: column; padding: 12px; gap: 10px; }
+  .searchbar-divider { width: 100%; height: 1px; margin: 0; }
+  .searchbar-submit { width: 100%; }
+}
