@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import SearchBar from '../components/SearchBar.jsx'
-import JobCard from '../components/JobCard.jsx'
+import JobCard from '../components/Jobcard.jsx'
 import { jobs, categories, jobTypes, levels } from '../data/jobs.js'
 
 const PAGE_SIZE = 6
