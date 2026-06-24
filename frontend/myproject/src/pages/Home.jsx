@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SearchBar from '../components/SearchBar.jsx'
-import JobCard from '../components/JobCard.jsx'
+import JobCard from '../components/Jobcard.jsx'
 import { jobs, categories } from '../data/jobs.js'
 import { ArrowRightIcon, BriefcaseIcon, BuildingIcon, ChevronRightIcon } from '../components/icons.jsx'
 
