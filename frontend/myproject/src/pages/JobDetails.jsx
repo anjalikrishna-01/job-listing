@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getJobById, getSimilarJobs, relativePosted, formatSalary } from '../data/jobs.js'
-import JobCard from '../components/JobCard.jsx'
+import JobCard from '../components/Jobcard.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 import api from '../services/api.js'
 import {
